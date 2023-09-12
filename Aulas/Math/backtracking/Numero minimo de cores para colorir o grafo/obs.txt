@@ -1,0 +1,1 @@
+Esse algoritmo nao da as permutacoes da resposta

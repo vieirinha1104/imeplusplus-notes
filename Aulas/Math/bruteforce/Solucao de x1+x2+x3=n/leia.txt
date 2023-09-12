@@ -1,0 +1,4 @@
+Temos: x1*a+x2*b+x3*c=n
+Onde a,b,c,n sao dados
+Testa todas as possibilidades para x1 e x2 e testa x3 pelo complemento
+Testamos x1 e x2 de forma gulosa, mas apenas greedy nao funciona, o problema eh todo bruteforce praticamente

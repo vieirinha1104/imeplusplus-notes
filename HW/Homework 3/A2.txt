@@ -1,0 +1,2 @@
+Nota: fiz a A por BFS, mas deu Memory Limit Exceeded, visto q a
+complexidade de memoria eh exponencial

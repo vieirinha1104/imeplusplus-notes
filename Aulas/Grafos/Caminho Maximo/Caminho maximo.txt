@@ -1,0 +1,8 @@
+Diferente do caminho minimo, esse problema nao tem solucao em tempo polinomial, trata-se de um problema NP-dificil, ou seja, ele so pode ser resolvido em tempo polinomial para grafos arbitrarios se P=NP
+
+Ha uma solucao linear para grafos aciclicos direcionados
+
+Para um grafo arbitrario, se o N de vertices for pequeno( N<=10 ), pode-se testar todas as permutacoes (N<=10!)
+
+Dada uma permutacao 1 -> 2 -> 3 -> 4, por ex: o ponto de partida eh o pertice "1", se 1 for adj a "2" soma o peso a distancia, ate que chegue no fim da lista ou chegue num dead end( proximo vertice nao adjacente )
+

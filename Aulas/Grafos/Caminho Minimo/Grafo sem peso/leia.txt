@@ -1,0 +1,1 @@
+Basta um BFS, mesmo algoritmo de dijkstra, so que com queue normal, ao inves do priority queue de minimo

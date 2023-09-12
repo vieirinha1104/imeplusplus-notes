@@ -1,0 +1,32 @@
+obs:declarar todas as variaveis como global: como o vector ans por ex
+
+1-) montar uma funcao boleana check para o backtracking
+2-) montar uma funcao 'bt' recursiva:
+em um laco de for:
+colocar o primeiro elemnto, e entao verificar com check:
+se ok, chama a funcao bt em baixo reverter ao estado inicial
+cc, reverte ao estado inicial e continue no laco do for
+
+bool check ( ... ){
+if( ... ){
+return true;
+}
+return false; 
+}
+void bt(int k){
+if(k==n){
+printa resposta
+}
+for(int i=1;i<=n;i++){
+v.push_back(i);
+if(check(v[k])){
+bt(k+1);
+v.pop_back();
+}
+else{
+v.pop_back();
+continue;
+}
+}
+}
+3-) na main chamar bt(0);

@@ -1,0 +1,4 @@
+Uma das utilidades do DFS eh verificar se o grafo eh ciclico ou nao, ou se eh conexo ou nao
+Arvore: Qualquer grafo que seja aciclico e conexo
+->Se voce fizer um dfs em um no qualquer, e voce nao visitar todos os nos do grafo, entao ele nao eh conexo
+->Se voce fizer um dfs em um no qualquer da arvore, se no dfs um dos adj do no ja tiver sido visitado(que nao fosse o no pai), entao havia um ciclo.
