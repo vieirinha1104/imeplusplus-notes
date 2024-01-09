@@ -1,14 +1,11 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 int n,m;
-
+//Solucao por teoria de grafos,usando BFS, mas montei a arvore fznd aloc dinamica, tive problemas com Memory Limit Exceed
 bool check(int c){
     if(c>=0) return true;
     else return false;
 }
-
 struct node{
     int curl; int vis=0; int level=1;
     vector<node*> children;
@@ -16,7 +13,6 @@ struct node{
     node(){};
     ~node(){};
 };
-
 void bfs(node* root) {
    root->vis=1;
    for(int i=0;i<2;i++){

@@ -1,0 +1,19 @@
+//Bizu para conexidade:
+int dfs(int s){
+int r=1
+for( auto e: adj[s] ) {
+	if(!vis[e]) r+=dfs(e);
+}
+return r;
+...
+for(int i=1;i<=n;i++){
+	set_vis(); //colocar todos como n visitados
+	if(dfs(i)<n){ 
+		cout << "NO\n";
+		return 0;
+	}
+}
+cout << "YES\n";
+O(N^2)
+//Como saber se um grafo eh biconexo
+

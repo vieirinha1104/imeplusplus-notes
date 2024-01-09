@@ -1,0 +1,22 @@
+buffer circular:
+tem um tamanho maximo fixo: ex: capicade: 5
+sz=0;
+cap=5;
+
+inicia-se uma lista vazia com capacidade maxima de 5 elementos: [ , , , , , ]
+insercao: 
+1-) Primeiro elemento: escolhe uma posicao para colocar um elemento: ex escolha a posicao (inicio) "1" para inserir o elemento "2":
+[ , 2 , , , ] ( inicio = 1) ( atual =1 )
+sz=1
+
+2-) Proximos elementos: inserir "3"
+[ , 2 , 3 ,  ,  ] (inicio = 1) (atual = 2)
+sz=2;
+inserir "4"
+[ , 2 , 3 , 4 ,  ] (inicio =1) (atual = 3)
+sz=3;
+inserir "5"
+[ , 2 , 3 , 4 , 5] (inicio =1) (atual = 4)
+sz=4;
+if(atual == cap - 1 ){
+atual=

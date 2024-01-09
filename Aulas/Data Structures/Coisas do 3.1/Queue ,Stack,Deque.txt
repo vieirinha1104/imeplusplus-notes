@@ -1,0 +1,68 @@
+queue: fila
+
+Declaracao:
+Sintaxe queue<tipo> nome;
+Ex:
+queue<int> pessoas; -> []
+
+Adicionar elementos:
+Funcao Push:
+nome.push(objeto);
+Ex: pessoas.push(3); -> [3]
+pessoas.push(6); -> [3,6]
+pessoas.push(12); -> [3,6,12]
+
+Acessar o Primeiro elemento:
+Funcao front:
+nome.front(); -> retorna o primeiro elemento da fila
+Ex:
+int x=pessoas.front(); //x=3
+
+Acessar o ultimo elemento:
+Funcao back: 
+nome.back();
+Ex:
+int y=pessoas.back(); //y=12
+
+Remover um elemento da fila: so eh possivel remover o primeiro elemento da lista
+Funcao Pop:
+nome.pop();
+Ex: pessoas.pop(); -> [6,12]
+
+Tamanho da lista:
+Funcao size: retorna um inteiro com o tamanho da lista
+nome.size();
+Ex: int z=pessoas.size(); //z=2( a lista so tem dois elementos: 6,12 )
+
+Verificar se a fila esta vazia:
+Funcao empty: retorna TRUE se a fila estiver vazia, retorna FALSE caso contrario
+Sintaxe: nome.empty();
+Ex:
+bool b=pessoas.empty(); -> b= false
+pessoas.pop();->[12]
+pessoas.pop();->[]
+bool B=pessoas.empty(); -> B= true
+
+Stack: pilha
+Declaracao: stack<tipo> nome; stack<int> s;
+Insercao: s.push(valor); -> insere um elemento no topo da lista
+Remocao: s.pop(); -> remove o elemento do topo da lista
+Acesso: s.top(); -> retorna o elemento do topo da lista
+Verificar se a pilha esta vazia: s.empty(); -> retorna booleano
+Tamanho da pilha: s.size(); -> retorna inteiro com o tamanho da pilha
+
+Deque (fila+pilha): A deque is a data structure that supports adding elements to both the beginning and the end.
+Declaracao: deque<tipo> nome;
+
+Insercao no final da fila: nome.push_back(valor);
+Insercao no inicio da fila: nome.push_front(valor);
+
+Remocao do ultimo da fila: nome.pop_back();
+Remocao do primeiro elemento da fila: nome.pop_front();
+
+Acesso ao primeiro elemento da fila: nome.front(); -> retorna o elemento
+Acesso ao ultimo elemento da fila: nome.back(); -> retorna o elemento
+
+Saber se a fila esta vazia: nome.empty(); -> retorna booleano
+
+Saber o tamanho da fila: nome.size(); -> retorna inteiro

@@ -1,0 +1,2 @@
+vector<vector<int>> v(n,vector<int>(m));
+Matriz de 0s de n linhas e m colunas

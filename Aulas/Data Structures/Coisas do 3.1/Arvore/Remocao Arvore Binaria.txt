@@ -1,0 +1,5 @@
+3 casos:
+1: a chave q voce quer remover eh uma folha -> tranquilo, so remover
+2: a chave que voce quer remover tem apenas um filho-> faz a ligacao do filho do no com o pai do no
+3: a chave que voce quer remover tem dois filhos ( caso mais complicado ) ->vamos precisar do ultimo no visitado na funcao busca, vamos usar
+o parametro substituto

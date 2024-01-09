@@ -1,0 +1,78 @@
+Vector: Array de tamanho variavel
+
+sintaxe: vector<tipo> nome;
+Ex:
+vector<int> v; ->Declarou um vector para inteiros de nome 'v', inicialmente vazio
+
+Para adicionar um elemento na lista:
+Funcao Push Back:
+Sintaxe:
+nome.push_back(objeto);
+Ex:
+v.push_back(1); -> adicionamos o "1" na nossa lista
+
+Funcao Size:
+Sintaxe:
+nome.size() -> Retorna o tamanho da lista de nome 'nome'( retorna um numero inteiro )
+Ex: vector<int> v;
+v.push_back(1);
+v.push_back(2);
+v.push_back(3);
+int n=v.size(); -> n=3
+
+Para acessar os elementos do vector -> igual array,
+Sintaxe: nome[i] ->Acesso eh O(1)
+Ex: cout << v[0] -> printar o "1"
+
+Para remover um elemento da lista:
+Funcao Pop Back: O(1) (amortizado,parcelado)
+Sintaxe:
+nome.pop_back();
+Ex: vector<int> v; -> lista vazia []
+v.push_back(1); -> lista [1]
+v.push_back(2); -> lista [1,2]
+v.push_back(3); -> agora minha lista eh [1,2,3]
+v.pop_back(); -> agora minha lista eh [1,2]
+
+Funcao begin():
+Sintaxe: nome.begin();
+Ex: vector<int> v;
+v.push_back(1);
+v.begin(); -> retorna um interator que aponta para o primento elemento do vector v(no caso o "1")
+
+Funcao erase():
+Sintaxe: nome.erase(interator);
+Recebe como parametro um interator que aponta para o elemento que voce deseja remover, e remove esse elemento da lista
+Ex: vector<int> v; -> lista vazia []
+v.push_back(1);
+v.push_back(2);
+v.push_back(3);
+v.push_back(4);
+v.push_back(5); -> lista [1,2,3,4,5]
+v.erase(v.begin()+2) -> apaga o elemento que esta na terceira posicao da lista, lista -> [1,2,4,5]
+
+Sintaxe: nome.erase(interator begin,interator end)
+Apaga o elemento que o interator begin estiver apontando, e todos os proximos ate o interator end
+Ex: vector<int> v;
+v.push_back(1);
+v.push_back(2);
+v.push_back(3);
+v.push_back(4);
+v.push_back(5); -> lista [1,2,3,4,5]
+v.erase(v.begin(),v.begin()+2) -> apaga os elementos nas posicoes de 1 a 3, lista -> [4,5]
+
+Funcao clear():
+Sintaxe: nome.clear(); -> apaga todos os elementos da lista
+Ex: vector<int> v; -> lista []
+v.push_back(1);
+v.push_back(2);
+v.push_back(3);
+v.push_back(4);
+v.push_back(5); -> lista [1,2,3,4,5]
+v.clear(); -> lista []
+
+Ordenar: Podemos ordena-lo usando a funcao sort
+Ex: vector<int> v;
+sort(v.begin(),v.end()); -> ordena a lista
+obs: v.begin() -> interator que aponta para o primeiro elemento da lista
+v.end() -> aponta para o proximo elemento depois do ultimo elemento da lista

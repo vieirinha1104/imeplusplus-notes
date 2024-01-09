@@ -7,7 +7,6 @@ vector<int> vis(100);
 
 void dfs(int s){
     vis[s]=1;
-    cout << s;
     for(auto x : adj[s]){
         if(!vis[x]){
             dfs(x);

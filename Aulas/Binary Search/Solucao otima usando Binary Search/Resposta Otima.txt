@@ -1,0 +1,15 @@
+while(l < r){
+       int m = (l+r)/2;
+       if(condição) l = m + 1;
+       else r = m;
+   }
+   pos = l;
+
+Se voce usar m=(l+r+1/2)
+
+while(l < r){
+       int m = (l+r+1)/2;
+       if(condição) l = m;
+       else r = m-1;
+   }
+   pos = l;

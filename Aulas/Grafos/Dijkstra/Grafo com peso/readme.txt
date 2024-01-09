@@ -1,0 +1,1 @@
+Imagine o algoritmo de Dijkstra, mas ao inves de somar os pesos vc multiplica ele, eh possivel achar o log da resposta usando o algoritmo de dijkstra, pois log(ab) = log a + log b

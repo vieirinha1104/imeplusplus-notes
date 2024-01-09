@@ -1,3 +1,0 @@
-Dado um estado inicial: esse sera seu no raiz
-todas as posibilidades de movimento, geram um novo estado, estes serao os filhos do no raiz
-e segue-se recursivamente para cada novo estado gerado

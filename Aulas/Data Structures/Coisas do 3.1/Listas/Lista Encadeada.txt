@@ -1,0 +1,13 @@
+Para criar uma lista, precisamos declarar um struct no que guarda uma 'chave' e um 'ponteiro para outro tipo 'struct no'' 
+e criar uma variavel do tipo 'ponteiro' para 'struct no':
+Ex: struct no {
+int chave;
+struc no* prox;
+}
+struc no *lista=NULL;( minha lista inicialmente vazia )
+
+Para mudarmos o valor de uma variavel(nao global) atraves de uma chamada de funcao, precisamos simular uma chamada por referencia dos
+parametros da funcao:
+para mudar o valor de uma variavel normal( int, float, char, ... ) usa-se ponteiro (*int, *Float,*char,...)
+para mudar o valor de uma variavel do tipo ponteiro (*int, *float,*char,...) usa-se ponteiro para ponteiro (**int, **Float, **char, ... )
+//Usar uma simulacao de parametro por ref, tb eh um jeito de conseguir que uma funcao retorne mais de um valor

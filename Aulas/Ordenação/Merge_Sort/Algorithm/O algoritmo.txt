@@ -1,0 +1,10 @@
+-Dado uma lista L
+-Vamos dividir L em duas listas U(tamanho n/2) e V(tamanho n/2+1)
+-Copiar L[i] para U[i] para i=0 ate n/2-1
+-Copiar L[i] para V[i] para i=n/2 ate n-1
+-Vamos aplicar o merge_sort recursivamente para U
+-Vamos aplicar o merge_sort recursivamente para V
+-Merge_sort vai devolver U e V ordenadas 
+-Entao fazemos merge de U e V em L, concatenando as duas listas de tal forma que L fique ordenada
+-Fiz um codigo para isso, mas ele ficou n^2logn
+-Na outra pasta tem o mesmo codigo, mas consertado pra ficar nlogn

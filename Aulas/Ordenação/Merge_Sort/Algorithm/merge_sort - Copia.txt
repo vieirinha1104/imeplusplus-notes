@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+#define N 1000005
+using namespace std;
+
+void merge(vector<int> u,vector<int> v,vector<int> &l){
+    int i=0,j=0;
+    int p=u.size(); int q=v.size();
+    u.push_back(N); v.push_back(N);
+    for(int k=0;k<p+q;k++){
+        if(i==p or j==q){
+            if(i==p and j==q) return;
+            else if(i==p) l[k]=v[j++];
+            else l[k]=u[i++];
+        }
+        else{
+            if(u[i]<v[j]) l[k]=u[i++];
+            else l[k]=v[j++];
+        }
+    }
+}
+void merge_sort(vector<int> &l){
+    int n=l.size(); int mid=(n)/2;
+    if(n==1) return;
+    vector<int> u,v;
+    for(int i=0;i<mid;i++){
+        u.push_back(l[i]);
+    }
+    for(int i=mid;i<l.size();i++){
+        v.push_back(l[i]);
+    }
+    merge_sort(u); merge_sort(v);
+    merge(u,v,l);
+}
+
+int main(){
+    vector<int> v(10);
+    for(int i=1;i<=10;i++){
+        v[i-1]=11-i;
+    }    
+    merge_sort(v);
+    for(int i=0;i<10;i++){
+        cout << v[i] << " ";
+    }
+}

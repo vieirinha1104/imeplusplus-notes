@@ -1,0 +1,4 @@
+Vector
+Stack -> Pilha ->Todas as operacoes sao no ultimo colocado
+Queue -> Fila -> Todas as operacoes sao no primeiro colocado
+Deque -> Fila circular (Double ended queue) -> Stack+Queue -> Todas as operacoes sao no ultimo ou primeiro colocado

@@ -4,37 +4,55 @@
 using namespace std;
 
 int n,m;
-vector<int> adj[N],vis(N);
+vector<int> adj[N],vis(N),color(N);
 bool check;
 
-void cyclic(int curl,int prev){ //basicamente um dfs modificado
-    vis[curl]=1;
-    for(auto e : adj[curl]){
-        if(!vis[e]) cyclic(e,curl);
-        else if(vis[e] and e!=prev) check=true;
-        //obs, se voce trocar esse 'else if' por 'if' o codigo nao vai funcionar
-
-    }
-}
-//Obs, nem precisaria verificar se o grafo era ciclico, basta verificar conexidade e se n-1=m
-int main(){
-    check=false;
-    cin >> n >> m;
-    for(int i=1;i<=m;i++){
-        int a,b; cin >> a >> b;
-        adj[a].push_back(b);
-        adj[b].push_back(a);
-    }
-    cyclic(1,0);
-    if(check){
-        cout <<"NO\n"; return 0;
-    }
-    else{
-        for(int i=1;i<=n;i++){
-            if(!vis[i]){
-                cout << "NO\n"; return 0;
+void bfs(int s) {
+   queue<int> q;
+   vis[s]=1;
+   color[s]=0;
+   q.push(s);
+   while (!q.empty()) {
+       int u = q.front(); q.pop();
+       for (auto x : adj[u]){
+            if(color[x]==-1){
+                color[x]=1-color[u];
+                if(!vis[x]){ 
+                    vis[x]=1;
+                    q.push(x);
+                }   
+            } 
+            else if(color[x]!=-1 and color[x]==color[u]){
+                check=false;
+                return;
             }
         }
-        cout << "YES\n"; return 0;
+    }
+}
+
+int main(){
+    int t;
+    for(int i=0;i<t;i++){
+        for(int j=1;j<=2000;j++){
+            vis[j]=0;
+            color[j]=-1;
+        }
+        cin >> n >> m;
+        for(int j=0;j<m;j++){
+            int a,b;
+            cin >> a >> b;
+            adj[a].push_back(b);
+            adj[b].push_back(a);
+        }
+        check=true;
+        for(int j=1;j<=2000;j++){
+            if(!check) break;
+            if(!vis[j]) bfs(j);
+        }
+        if(check) cout << "Scenario #:" << t+1 << "\n" << "Suspicious bugs found!\n";
+        else cout << "Scenario #:" << t+1 << "\n" << "No suspicious bugs found!\n";
+        for(int i=1;i<=2000;i++) adj[i].clear();
+        
+
     }
 }

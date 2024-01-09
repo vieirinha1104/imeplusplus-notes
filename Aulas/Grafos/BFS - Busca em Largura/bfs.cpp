@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+-0-#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -7,7 +7,6 @@ vector<int> vis(100);
 
 void bfs(int s) {
    queue<int> q;
-   cout << s;
    vis[s] = 1;
    q.push(s);
    while (!q.empty()) {
@@ -15,7 +14,6 @@ void bfs(int s) {
        for (auto x : adj[u]){
             if(!vis[x]){ 
                 vis[x]=1;
-                cout<<x; 
                 q.push(x);
             }   
         }

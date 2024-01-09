@@ -1,0 +1,15 @@
+//memset
+usado para preencher um array de char com um caracter especifico
+ex: char str[10];
+ memset(str,'-',sizeof(str));
+ for(auto x : str) cout << x << " ";
+primeiro parametro: vetor apontando para o primeiro elemento do bloco q vamos preencher
+segundo parametro: unsigned char que vamos preencher
+terceiro parametro: tamanho do bloco que vamos preencher
+dai o vetor de char fica ( - - - - - - - - - - ) // 10 '-'
+Mas pode ser usado para preencher um array de int ou uma matriz de int, por ex:
+int arr[10];
+memset(arr,0,sizeof(arr)); -> preenche o array com '0'
+memset(arr,-1,sizeof(arr)); -> preenche o array com '-1'
+memset(arr,63,sizeof(arr)); -> preenche o array com 'infinito' //1061109567, o famoso 0x3f3f3f3f
+o valor que voce passa eh lido como unsigned char, entao eh feito a conversao
